@@ -1,6 +1,6 @@
-AngularJS for Test-Driven Development
+# AngularJS for Test-Driven Development
 
-# Required Installation
+$ Required Installation
     > NodeJs with npm
     > npm install —global bower
     > npm install —global gulp
