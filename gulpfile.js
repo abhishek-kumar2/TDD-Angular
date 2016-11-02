@@ -1,8 +1,14 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var Server = require('karma').Server;
+var kermaServer = require('karma').Server;
+var server = require('gulp-live-server');
 
-gulp.task('serve', function(){
+gulp.task('server', function(){
+	var live = new server('server.js');
+	live.start();
+})
+
+gulp.task('serve', ['server'], function(){
 	browserSync.init({
 		notify:false,
 		port:8080,
@@ -18,7 +24,7 @@ gulp.task('serve', function(){
 });
 
 gulp.task('test-browser', function(done){
-	new Server({
+	new kermaServer({
 			configFile: __dirname + '/karma.conf.js',
 			singleRun: true
 		}, done).start();
