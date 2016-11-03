@@ -10,6 +10,7 @@
     > npm install --global --save karma mocha 
     > npm install --global --save karma-mocha
     > npm install --global --save-dev karma-phantomjs-launcher
+    > bower install --save angular-mocks
 
 	### temprory server
     > npm install --global --save express
